@@ -1,0 +1,75 @@
+\documentclass[aspectratio=1610]{beamer}
+\usetheme{metropolis}
+\usefonttheme{serif}
+\setbeamertemplate{caption}[numbered]
+
+\usepackage{biblatex}
+\addbibresource{cite.bib}
+%% APA citation style
+\usepackage{url}
+\def\UrlBreaks{\do\/\do-}
+\usepackage{breakurl}
+\PassOptionsToPackage{breaklinks}{hyperref}
+\hypersetup{breaklinks=true}
+\usepackage{hyperref}
+\usepackage{amsmath, amssymb, amsthm}
+% Drawing
+\usepackage{tikz}
+\usetikzlibrary{calc, positioning, chains}
+\usepackage{annotate-equations, xcolor}
+\definecolor{blue-50}{HTML}{eff6ff}
+\definecolor{slate-50}{HTML}{f8fafc}
+\definecolor{slate-200}{HTML}{e2e8f0}
+\definecolor{slate-400}{HTML}{94a3b8}
+\definecolor{slate-600}{HTML}{64748b}
+\definecolor{slate-700}{HTML}{374151}
+\definecolor{blue-300}{HTML}{60a5fa}
+\definecolor{blue-700}{HTML}{1d4ed8}
+\definecolor{blue-950}{HTML}{172554}
+\definecolor{violet-50}{HTML}{f5f3ff}
+\definecolor{violet-300}{HTML}{a78bfa}
+\definecolor{violet-950}{HTML}{2e1065}
+\definecolor{fuchsia-300}{HTML}{e879f9}\
+
+\usepackage{xspace}
+\def\eg{\textit{e.g.}\@\xspace}
+\def\etc{\textit{etc.}\@\xspace}
+\def\ie{\textit{i.e.}\@\xspace}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{enumitem}
+\usepackage{multicol}
+\usepackage{longtable}
+\usepackage{float}
+\definecolor{background}{RGB}{255, 255, 255}
+\usepackage{xifthen, xparse}
+
+\newenvironment{fr}[1][]{%
+    \ifthenelse{\isempty{#1}}%
+    {\begin{frame}[environment=fr,fragile,containsverbatim]}%
+    {\begin{frame}[environment=fr,fragile,containsverbatim]{#1}}}%
+    {\end{frame}}
+
+\usepackage[outputdir=build]{minted}
+\newmintinline[mono]{python}{}
+\newminted[monos]{python}{}
+
+\title{}
+\subtitle{Using Deep Learning to Detect Epileptic Seizures Through EEG Signals}
+\date{\today}
+\author{Anish Goyal}
+\institute{Governor's Honors Program 60 Engineering}
+
+\begin{document}
+
+\begin{fr}
+    \titlepage
+    \vfill
+    \begin{center}
+        Powered by \LaTeXe
+    \end{center}
+\end{fr}
+
+\begin{fr}{Table of Contents}
+    \tableofcontents
+\end{fr}
